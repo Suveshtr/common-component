@@ -26,6 +26,8 @@ export default class CommonForms extends React.Component {
     }))
   }
 
+  // For the TextInput, onChange can also be used: 
+  //https://stackoverflow.com/questions/44416541/react-native-difference-between-onchange-vs-onchangetext-of-textinput
   render() {
     const { input, showInput }  = this.state
     return (
