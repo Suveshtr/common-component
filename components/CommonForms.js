@@ -2,10 +2,10 @@ import React from 'react'
 import { 
   StyleSheet, 
   Text, 
-  View,
+  KeyboardAvoidingView,
   TextInput,
-  Switch,
-  KeyboardAvoidingView  
+  Switch, 
+  Image
  } from 'react-native';
 
 export default class CommonForms extends React.Component {
@@ -29,7 +29,11 @@ export default class CommonForms extends React.Component {
   render() {
     const { input, showInput }  = this.state
     return (
-      <View style={styles.container}>        
+      <KeyboardAvoidingView behavior='padding' style={styles.container}>
+        <Image 
+          source={{uri: 'https://tylermcginnis.com/tylermcginnis_glasses-300.png'}}
+          style={styles.img}
+        />      
         <Switch
           value={showInput}
           onValueChange={this.handleToggleSwitch}
@@ -41,7 +45,7 @@ export default class CommonForms extends React.Component {
             onChangeText={this.handleTextChange}
           />
         )}
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
